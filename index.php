@@ -44,7 +44,9 @@
 	       		console.log(result);
 
 	       		let output = '';
-	       		for(i = 0; i < resultLength; i++) {
+
+	       		// using the loop
+	       		for(var i in result) {
 	       			let rowNumber = i + 1;
 	       			output += '<tr>';
 	       			output += '<td>' + rowNumber + '</td>'; 
@@ -54,6 +56,20 @@
 	       			output += '<td>' + result[i].category_names + '</td>';
 	       			output += '</tr>';
 	       		}
+
+	       		// Alternatively, we can use
+	       		// for(i = 0; i < resultLength; i++) {
+	       		// 	let rowNumber = i + 1;
+	       		// 	output += '<tr>';
+	       		// 	output += '<td>' + rowNumber + '</td>'; 
+	       		// 	output += '<td>' + result[i].candidates_id + '</td>'; 
+	       		// 	output += '<td>' + result[i].candidates_names + '</td>';
+	       		// 	output += '<td>' + result[i].centre_name + '</td>';
+	       		// 	output += '<td>' + result[i].category_names + '</td>';
+	       		// 	output += '</tr>';
+	       		// }
+
+	       		console.log(table);
 
 	       		table.innerHTML = output;
 	       		
